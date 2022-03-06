@@ -1,0 +1,7 @@
+<%= form_for :user do |f| %>
+    <%= content_tag(:p, "Login below")%>
+    <%= f.text_field :username, placeholder: "Create a username" %><br><br>
+    <%= f.password_field :password, placeholder: "Create a password" %><br><br>
+   
+    <%= f.submit "Login" %>
+<% end %>
