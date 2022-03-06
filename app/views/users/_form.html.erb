@@ -1,0 +1,13 @@
+<%= form_for @user do |f| %>
+    <% @user.errors.full_messages.each do |msg| %>
+        <li class="errors"><%= msg %></li>
+    <% end %>
+    <%= content_tag(:p, "Create a new account")%>
+    <%= f.text_field :first_name, placeholder: "Enter first name" %><br><br>
+    <%= f.text_field :last_name, placeholder: "Enter last name" %><br><br>
+    <%= f.text_field :username, placeholder: "Create a username" %><br><br>
+    <%= f.email_field :email, placeholder: "Enter your email address" %><br><br>
+    <%= f.password_field :password_digest, placeholder: "Create a password" %><br><br>
+    <%= f.password_field :password_confirmation, placeholder: "Confirm your password" %><br><br>
+    <%= f.submit %>
+<% end %>
